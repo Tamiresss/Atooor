@@ -43,5 +43,4 @@ public class Ator {
         return "Ator{" + "nome_artistico=" + nome_artistico + '}';
     }
     
-    
 }

@@ -4,16 +4,18 @@
  * and open the template in the editor.
  */
 package dao;
+
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import modelo.Ator;
+
 /**
  *
  * @author Administrador
  */
 public class AtorDao {
-    public static boolean inserir(Ator objeto) {
+     public static boolean inserir(Ator objeto) {
         String sql = "INSERT INTO ator (nome_real, nome_artistico) VALUES (?, ?)";
         try {
             PreparedStatement ps = conexao.Conexao.getConexao().prepareStatement(sql);
@@ -26,10 +28,10 @@ public class AtorDao {
             return false;
         }
     }
-    public static void main(String[] args) {
+      public static void main(String[] args) {
         Ator objeto = new Ator();
-        objeto.setNome_real("Tamires");
-        objeto.setNome_artistico("Tami");
+        objeto.setNome_real("Luiza");
+        objeto.setNome_artistico("Lu");
         
         boolean resultado = inserir(objeto);
         if (resultado) {

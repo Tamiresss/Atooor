@@ -4,11 +4,11 @@
  * and open the template in the editor.
  */
 package controlador;
+
 import dao.AtorDao;
 import javax.swing.JOptionPane;
 import modelo.Ator;
 import tela.manutencao.ManutencaoAtor;
-
 
 /**
  *
@@ -18,8 +18,8 @@ public class ControladorAtor {
 
     public static void inserir(ManutencaoAtor man){
         Ator objeto = new Ator();
-        objeto.setNomeArtistico(man.jtfNomeArtistico.getText());
-        objeto.setNomeReal(man.jtfNomeReal.getText());
+        objeto.setNome_real(man.jtfNomeArtistico.getText());
+        objeto.setNome_artistico(man.jtfCódigo.getText());
         
         boolean resultado = AtorDao.inserir(objeto);
         if (resultado) {
